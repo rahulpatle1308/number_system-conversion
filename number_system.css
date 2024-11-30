@@ -1,80 +1,145 @@
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            /* background-color: #e6e6e6; */
+            background: linear-gradient(145deg, #6f0b09, #0e96863b);
+            color: #00aeff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
-
+        
+        body:hover {
+            background-color: #11c0d3;
+            color: #e6e6e6;
+        }
+        
         .container {
-            background-color: #fff;
+            background-color: linear-gradient(145deg, #ffffff, #dff9ff);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 4px 4px 30px rgba(213, 7, 7, 0.981);
             width: 400px;
             text-align: center;
+            border: 1px solid rgb(98, 85, 26);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 4px 4px 40px rgba(107, 1, 1, 0.9);
+            background: linear-gradient(145deg, #c85a5a, #29bff0);
+        }
+        
         h1 {
-            color: #4CAF50;
+            color: #000000;
+            font-size: large;
+            font-weight: 500;
             margin-bottom: 20px;
             font-size: 20px;
+            transition: color 0.3s ease;
         }
-
+        
+        h1:hover {
+            color: #000000;
+        }
+        
         label {
             font-weight: bold;
             margin-top: 10px;
+            transition: color 0.3s ease;
         }
-
+        
+        label:hover {
+            color: #000606;
+        }
+        
         input, select {
             width: 100%;
             padding: 8px;
             margin-top: 8px;
             margin-bottom: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid transparent;
+            box-shadow: 8px 8px 64px rgba(0, 0, 0, 0.2);
             border-radius: 4px;
             font-size: 14px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
-
+        
+        input:hover, select:hover {
+            background-color: #e3f8ff;
+            box-shadow: 0px 0px 10px rgb(0, 174, 255);
+            border-color: #17a2b8;
+        }
+        
         button {
-            background-color: #4CAF50;
-            color: white;
+            background: linear-gradient(145deg, #17b0c5, #45a049);
+            color: #ea2727;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
         }
-
+        
         button:hover {
-            background-color: #45a049;
+            background: linear-gradient(145deg, #45a049, #17b0c5);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
-
+        
         input[type="text"] {
             text-align: center;
         }
-
+        
         .form-group {
             margin-bottom: 15px;
         }
-
-        /* Responsive Design */
+        
+        .form-group:hover {
+            color: #008080;
+        }
+        
+        /* Mobile-Specific Styles */
         @media screen and (max-width: 500px) {
-            .container {
-                width: 100%;
-                padding: 15px;
+            body {
+                background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+                color: #1f1f1f;
             }
-
+        
+            .container {
+                width: 90%;
+                padding: 15px;
+                border: 3px solid rgba(215, 5, 23, 0.8);
+                box-shadow: 4px 4px 30px rgba(255, 0, 255, 0.7);
+                background: linear-gradient(145deg, #fefefe, #ffd9f0);
+            }
+        
             h1 {
                 font-size: 18px;
+                color: #ff4d6d;
+                text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.7);
             }
-
+        
             button {
                 width: 100%;
                 padding: 12px;
+                background: linear-gradient(145deg, #ff9a9e, #fecfef);
+                box-shadow: 2px 2px 8px rgba(255, 105, 135, 0.7);
+            }
+        
+            button:hover {
+                background: linear-gradient(145deg, #fecfef, #ff9a9e);
+                color: #ffffff;
+            }
+        
+            input:hover, select:hover {
+                background-color: #ffe6f7;
+                box-shadow: 0px 0px 10px rgba(255, 105, 135, 0.5);
             }
         }
+        
